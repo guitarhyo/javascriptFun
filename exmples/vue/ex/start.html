@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>vue</title> <!-- Âü°í https://kr.vuejs.org/v2/guide/index.html -->
+<meta charset="UTF-8">
+<title>vue</title> <!-- https://kr.vuejs.org/v2/guide/index.html -->
 <link rel="stylesheet" href="../resources/css/default.css" type="text/css" />
 <script src="https://unpkg.com/vue"></script>
 <script type="text/javascript">
@@ -10,15 +10,15 @@ window.onload = function () {
 	var app = new Vue({
 		  el: '#app',
 		  data: {
-		    message: '¾È³çÇÏ¼¼¿ä Vue!',
-		    tmp1: 'Ãß°¡!! data'
+		    message: 'ì•ˆë…•í•˜ì„¸ìš” Vue!',
+		    tmp1: 'í•˜í•˜!! data'
 		  }
 		})
 	
 	var app2 = new Vue({
 		  el: '#app-2',
 		  data: {
-		    message: 'ÀÌ ÆäÀÌÁö´Â ' + new Date() + ' ¿¡ ·Îµå µÇ¾ú½À´Ï´Ù'
+			  message: 'ì´ í˜ì´ì§€ëŠ” ' + new Date() + ' ì— ë¡œë“œ ë˜ì—ˆìŠµë‹ˆë‹¤'
 		  }
 		})
 }
@@ -27,7 +27,7 @@ window.onload = function () {
 </head>
 <body>
 <div class="header">
-<span class="logo">start example</span>
+<span class="logo">ì‹œì‘í•˜ê¸°</span>
 </div>
 <div id="app">
   {{ message }}
@@ -37,7 +37,7 @@ window.onload = function () {
 
 <div id="app-2">
   <span v-bind:title="message">
-    ³» À§¿¡ Àá½Ã ¸¶¿ì½º¸¦ ¿Ã¸®¸é µ¿ÀûÀ¸·Î ¹ÙÀÎµù µÈ titleÀ» º¼ ¼ö ÀÖ½À´Ï´Ù!
+ ë‚´ ìœ„ì— ì ì‹œ ë§ˆìš°ìŠ¤ë¥¼ ì˜¬ë¦¬ë©´ ë™ì ìœ¼ë¡œ ë°”ì¸ë”© ëœ titleì„ ë³¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤!
   </span>
 </div>
 </body>
