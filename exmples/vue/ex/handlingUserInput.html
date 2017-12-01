@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue</title>
+<link rel="stylesheet" href="https://hyobase-572cb.firebaseapp.com/resources/css/default.css" type="text/css" />
+<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div class="header">
+<span class="logo">사용자 입력 핸들링</span>
+</div>
+
+
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">메시지 뒤집기</button>
+  <p>{{ test }}</p>
+  <button v-on:click="sendMessage">메시지 넣고 빼기</button>
+  <p></p>
+  <div style="border: solid;" v-on:click="sendMessage">버튼이 아닌 div 태그에 v-on:click="sendMessage" 적용하면?</div>
+</div>
+<script type="text/javascript">
+var app5 = new Vue({
+	  el: '#app-5',
+	  data: {
+	    message: '안녕하세요! Vue.js!',
+	    test: ''
+	  },
+	  methods: {
+	    reverseMessage: function () {
+	      this.message = this.message.split('').reverse().join('')
+	    },
+	    sendMessage: function () {
+		       
+		      if(this.test == ''){
+		    	  this.test = this.message
+		      }else{
+		    	  this.test = ''
+		      }
+		    }
+	  }
+	})
+</script>
+
+
+<p style="border-bottom: solid;"></p>
+
+
+<div id="app-6">
+  <p>{{ message }}{{ test }}</p>
+  <input v-model="message">
+  <input v-model="test">
+<!--  입력에 따라 message 에 바인딩된다 -->
+</div>
+<script type="text/javascript">
+var app6 = new Vue({
+  el: '#app-6',
+  data: {
+    message: '안녕하세요 Vue!',
+    test: 'test'
+  }
+})
+</script>
+
+</body>
+</html>    
